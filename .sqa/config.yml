@@ -1,0 +1,46 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EGI-Federation/eosc-application-deployment-manager:
+      branch: main
+      repo: https://github.com/EGI-Federation/eosc-application-deployment-manager.git
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: fix/updatego
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/EGI-Federation/eosc-application-deployment-manager git:
+        commands:
+        - /usr/bin/env sh .sqa/script.burgundy_skeptical_finch.sh
+        container: qc.acc_mango_passionate_kookaburra
+  QC.Doc:
+    repos:
+      github.com/EGI-Federation/eosc-application-deployment-manager find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.khaki_proactive_lobster.sh
+        container: qc.doc_cobalt_lucky_goat
+      github.com/EGI-Federation/eosc-application-deployment-manager git:
+        commands:
+        - /usr/bin/env sh .sqa/script.periwinkle_goofy_panda.sh
+        container: qc.doc_verdant_plucky_mink
+      github.com/EGI-Federation/eosc-application-deployment-manager markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.ice_happy_hamster.sh
+        container: qc.doc_cadet_nervous_emu
+  QC.Lic:
+    repos:
+      github.com/EGI-Federation/eosc-application-deployment-manager licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.grege_supportive_fox.sh
+        container: qc.lic_gunmetal_reckless_lionfish
+  QC.Ver:
+    repos:
+      github.com/EGI-Federation/eosc-application-deployment-manager get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.saffron_devoted_gazelle.sh
+        container: qc.ver_aqua_enigmatic_impala
+timeout: 5400
