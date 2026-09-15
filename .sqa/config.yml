@@ -15,32 +15,32 @@ sqa_criteria:
     repos:
       github.com/EGI-Federation/eosc-application-deployment-manager git:
         commands:
-        - /usr/bin/env sh .sqa/script.burgundy_skeptical_finch.sh
-        container: qc.acc_mango_passionate_kookaburra
+        - /usr/bin/env sh .sqa/script.gunmetal_funny_spren.sh
+        container: qc.acc_tangerine_sweet_echidna
   QC.Doc:
     repos:
       github.com/EGI-Federation/eosc-application-deployment-manager find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.khaki_proactive_lobster.sh
-        container: qc.doc_cobalt_lucky_goat
+        - /usr/bin/env sh .sqa/script.snow_loving_catfish.sh
+        container: qc.doc_storm_rugged_kangaroo
       github.com/EGI-Federation/eosc-application-deployment-manager git:
         commands:
-        - /usr/bin/env sh .sqa/script.periwinkle_goofy_panda.sh
-        container: qc.doc_verdant_plucky_mink
+        - /usr/bin/env sh .sqa/script.saffron_careful_kingfisher.sh
+        container: qc.doc_storm_logical_crocodile
       github.com/EGI-Federation/eosc-application-deployment-manager markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.ice_happy_hamster.sh
-        container: qc.doc_cadet_nervous_emu
+        - /usr/bin/env sh .sqa/script.yellow_eccentric_dhole.sh
+        container: qc.doc_flax_restless_jackal
   QC.Lic:
     repos:
       github.com/EGI-Federation/eosc-application-deployment-manager licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.grege_supportive_fox.sh
-        container: qc.lic_gunmetal_reckless_lionfish
+        - /usr/bin/env sh .sqa/script.onyx_forgiving_chipmunk.sh
+        container: qc.lic_marigold_patient_porcupine
   QC.Ver:
     repos:
       github.com/EGI-Federation/eosc-application-deployment-manager get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.saffron_devoted_gazelle.sh
-        container: qc.ver_aqua_enigmatic_impala
+        - /usr/bin/env sh .sqa/script.cardamom_melancholy_piranha.sh
+        container: qc.ver_gunmetal_apprehensive_mink
 timeout: 5400
